@@ -1,0 +1,552 @@
+.card-bg {
+    background-color: transparent !important;
+}
+
+.card-none-border {
+    border: none !important;
+    box-shadow: none !important;
+}
+  
+
+
+
+/* Home Page */
+.card-width {
+    max-width: 266px !important;
+}
+
+.card-p {
+    padding: 25px 16px 0px 0px !important;
+}
+
+.card-title {
+    width: 225px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    position: relative !important;
+}
+
+.card-img {
+    height: 390px;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+    height: 3rem !important;
+    width: 3rem !important;
+}
+
+.carousel-indicators > button {
+    margin: 0 5px;
+    height: 5px !important;
+    width: 30px !important;
+    opacity: 0.5;
+    transition: opacity 0.6s;
+}
+
+.showing-movie {
+    background-color: red;
+}
+
+.coming-movie {
+    background-color: orange;
+}
+
+.slider {
+    margin-bottom: 135px !important;
+    margin-right: -25px !important;
+}
+
+.slick-arrow {
+    top: 0 !important;
+    bottom: 0 !important;
+    z-index: 1 !important;
+    width: 100px !important;
+    height: 100% !important;
+    transform: none !important;
+}
+
+.slick-prev {
+    left: -2% !important;
+}
+
+.slick-next {
+    right: 0 !important;
+}
+
+.slick-prev:before, .slick-next:before {
+    font-size: 2.5rem !important;
+}
+
+.slick-prev:hover {
+    background: linear-gradient(90deg, var(--bgColor) 0%, rgba(0, 0, 0, 0.1) 100%) !important;
+}
+
+.slick-next:hover {
+    background: linear-gradient(270deg, var(--bgColor) 0%,rgba(0, 0, 0, 0.1) 100%) !important;
+}
+
+.slick-dots {
+    bottom: -15% !important;
+    padding-bottom: 30px !important;
+    border-bottom: 5px solid var(--borderHomeColor);
+    margin-left: -16% !important;
+    width: 1524px !important;
+}
+
+.slick-dots li button:before {
+    font-size: 1rem !important;
+}
+
+.coming {
+    margin-bottom: 100px !important;
+}
+
+.link-text {
+    color: var(--colorMain) !important;
+    margin-left: 8px !important;
+}
+
+.link-text:hover {
+    opacity: 0.7;
+}
+
+.coming > .slick-dots {
+    border-bottom: none !important;
+} 
+
+.btn-transition {
+    transition: all 0s !important;
+}
+
+/* btn trong card khi hover */
+.MuiButtonBase-root:hover {
+    box-shadow: 0 10px 18px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;  
+    background: linear-gradient(180deg, #7674f0 0%, #6966ea 59.90%, #3e3be9 99.48%) !important;
+}
+
+.card-btn-info {
+    width: 40px !important;
+    min-width: 10px !important;
+}
+
+.width-50 {
+    max-width: 50%;
+}
+
+.card-btn-coming {
+    width: 225px;
+    font-size: 0.8125rem !important;
+}
+
+
+
+
+/* Movie Detail */
+.movie-card-width {
+    max-width: 337px !important;
+}
+  
+.movie-card-img {
+    height: 490px !important;
+}
+  
+.movie-card-btn {
+    margin: 20px 20px 20px 30px;
+    min-width: fit-content !important;
+    padding: 0px !important;
+    justify-content: center !important;
+}
+
+.movie-title-detail {
+    margin-bottom: 50px !important;
+    text-transform: uppercase;
+}
+
+
+
+
+/* Buy Ticket */
+.ticket-info-p {
+    padding: 20px 20px 25px 35px !important;
+}
+
+.ticket-m {
+    margin: 30px 0px !important;
+}
+
+/* Màu viền của các box,
+Màu viền của ngày hiện tại khi không được chọn */
+.ticket-border-box,
+.css-23p0if-MuiButtonBase-root-MuiPickersDay-root:not(.Mui-selected) {
+    border: 1px solid var(--colorSecond) !important;
+}
+
+.ticket-img {
+    width: 204px;
+    height: 299px;
+}
+
+
+
+
+/* Step 1 */
+
+/* Circle của step */
+.MuiStepIcon-root {
+    font-size: 50px !important;
+}
+
+/* Màu chữ tiêu đề của card trong trang home khi hover,
+Màu circle khi hover,
+Màu circle của step hiện tại,
+Màu circle khi step hoàn thành,
+Nút chọn phương thức thanh toán ở step 4 */
+.card-title:hover,
+.MuiStep-root:hover .MuiSvgIcon-root,
+.Mui-active,
+.css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root.Mui-completed,
+.MuiFormControlLabel-root > .Mui-checked {
+  color: var(--colorMain) !important;
+}
+
+/* Div chứa đường kẻ step */
+.MuiStepConnector-root {
+    align-content: center;
+    top: 28% !important;
+    left: calc(-50% + 30px) !important;
+    right: calc(50% + 30px) !important;
+}
+
+/* Đường kẻ step */
+.MuiStepConnector-line {
+    border: thin dashed !important; 
+}
+
+/* Màu đường kẻ khi step hoàn thành,
+Màu đường kẻ khi hover,
+Màu đường kẻ khi hoàn thành */
+.Mui-active > .MuiStepConnector-line,
+.MuiStep-root:hover .css-z7uhs0-MuiStepConnector-line,
+.Mui-completed > span.MuiStepConnector-line {
+  border: 2px solid var(--colorMain) !important;
+}
+
+/* Màu chữ các step khi hoàn thành,
+Màu các dots của carousel card */
+.MuiStepLabel-label.Mui-completed,
+.slick-dots li button:before {
+  color: var(--colorSecond) !important;
+}
+
+/* Màu calendar khi được chọn,
+Màu của các ngày khi hover
+Nút tăng số lượng trong buy-ticket step3 */
+.Mui-selected,
+.css-1wy8uaa-MuiButtonBase-root-MuiPickersDay-root:hover,
+.btn-increment {
+  background-color: var(--colorMain) !important;
+}
+
+/* Màu của các thứ trong calendar,
+Màu của các ngày trong calendar,
+Màu của nút chọn tháng trong calendar,
+Màu chữ nút xem trailer trong movie detail khi hover,
+Màu của nút chuyển tháng khi các tháng đó là hợp lệ */
+.MuiDayCalendar-weekDayLabel, 
+.MuiPickersDay-dayWithMargin,
+.MuiPickersCalendarHeader-switchViewIcon,
+.movie-card-btn-info:hover,
+.MuiPickersArrowSwitcher-button:not(.Mui-disabled),
+.MuiPickersCalendarHeader-label,
+.MuiYearCalendar-root,
+.MuiPickersFadeTransitionGroup-root {
+  color: white !important;
+  transition: all 0s;
+}
+
+/* Màu chữ và đường kẻ step khi chưa hoàn thành và màu tháng trước đó,
+Màu các ngày trước đó */
+.Mui-disabled,
+.MuiDayCalendar-weekContainer > .Mui-disabled,
+.abc .MuiButtonBase-root {
+    color: var(--colorDes) !important;
+}
+
+.ticket-p {
+    padding: 20px 20px 0px 25px !important;
+}
+
+.show-time {
+    width: 179px;
+    height: 54px;
+    border-radius: 5px !important;
+    margin-top: 15px !important;
+    background-color: var(--colorSecond) !important;
+    transition: all 0s !important;
+}
+
+.des-box {
+    padding: 2px;
+}
+
+
+
+
+/* Step 2 */
+.step2-box-p {
+    padding: 15px 20px 15px 20px;
+}
+  
+.line-first {
+    position: relative;
+    height: 80px;
+    background-color: var(--colorMain);
+    border-radius: 50%;
+    text-align: center;
+}
+  
+.line-second {
+    position: absolute;
+    height: 70px;
+    top: -30%;
+    left: 1%;
+    right: 1%;
+    bottom: 0;
+    background-color: var(--bgColor);
+    border-radius: 50%;
+    transform: translateY(50%);
+}
+
+.seat-box {
+    justify-content: center !important;
+}
+
+.seat {
+    font-size: 2.8rem !important;
+    color: var(--colorDes);
+}
+
+/* .seat {
+    font-size: 2rem !important;
+}
+
+.seat-c {
+    font-size: 2.3rem !important;
+} */
+
+.ml-3 {
+    margin-left: -3px !important;
+}
+  
+/* .seat-normal {
+    color: var(--colorDes);
+} */
+  
+.seat-vip {
+    color: rgb(245, 245, 82);
+}
+  
+.seat-couple {
+    color: aqua;
+}
+  
+.seat-select {
+    color: chartreuse !important;
+}
+  
+.seat-sold {
+    color: rgb(255 78 78);
+}
+
+.text-row-seat {
+    min-width: 20px !important;
+}
+
+.none-seat {
+    border: 1px solid red;
+}
+
+.btn-total-money {
+    width: 100%;
+    margin-top: 20px !important;
+}
+
+
+
+
+/* Step 3 */
+
+.title-box {
+    border-bottom: 1px dashed var(--borderHomeColor) !important;
+}
+
+.title-m {
+    margin: 20px 0 !important;
+}
+
+.order-p {
+    padding: 10px 35px;
+}
+
+.food-img {
+    width: 80px;
+    height: 106px;
+}
+
+.select-food {
+    margin-top: 20px !important;
+}
+
+.btn-decrement {
+    background-color: var(--colorDes) !important;
+}
+
+.quantity-step3 {
+    width: 10px !important;
+}
+
+.item-detail {
+    padding: 10px 0;
+}
+
+
+
+
+/* Step 4 */
+.MuiFormControlLabel-root > .MuiFormControlLabel-label {
+    font-weight: normal !important;
+}
+
+.MuiFormControlLabel-root > .MuiButtonBase-root:hover {
+    box-shadow: none !important;  
+    background: none !important;
+}
+
+
+
+/* Login */
+.l-wrapper {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../../../public/Cinemas-Ho-Chi-Minh-City.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.l-box {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--colorDes);
+    border-radius: 1rem;
+}
+
+.l-icon {
+    margin: 0.6rem !important;
+    background-color: black !important;
+}
+
+.l-btn {
+    margin-top: 2rem !important;
+    margin-bottom: 1rem !important;
+    border-radius: 6.25rem !important;
+    padding: 0.65rem !important;
+    background-color: var(--colorMain) !important;
+}
+
+.btn-sign-up {
+    background-color: green !important;
+}
+
+.btn-mt {
+    margin-top: 0.5rem !important;
+}
+
+
+
+/* Account */
+.a-container {
+    padding: 40px;
+    border: 1px solid var(--colorSecond);
+    border-radius: 16px;
+    margin-bottom: 50px;
+}
+
+.divider {
+    margin-top: 30px !important;
+    background: var(--colorSecond);
+}
+
+.inner-width {
+    width: 100% !important;
+}
+
+.a-form input,
+.a-form label {
+    color: var(--colorDes) !important;
+    z-index: 100;
+}
+
+.css-1jy569b-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
+    color: #1976d2 !important;
+}
+
+.a-form fieldset {
+    border-color: var(--colorSecond);
+}
+
+.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root.Mui-disabled .MuiOutlinedInput-notchedOutline {
+    border-color: var(--colorSecond) !important;
+    background: none !important;
+    color: red !important;
+}
+
+.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input.Mui-disabled {
+    -webkit-text-fill-color: var(--colorDes) !important;
+}
+
+.MuiPickersLayout-contentWrapper > .MuiDateCalendar-root {
+    background-color: var(--borderHomeColor) !important;
+}
+
+.avatar-picker {
+    position: absolute !important;
+    bottom: 0 !important;
+    right: 0 !important;
+    background-color: #717474 !important;
+}
+
+.avatar-picker:hover {
+    background-color: #717474;
+    opacity: 0.7;
+}
+
+
+
+.avatar-picker > .MuiSvgIcon-root,
+.promotion-box .MuiFormLabel-root,
+.promotion-box button,
+.promotion-box ::placeholder,
+.promotion-box .MuiChip-filled,
+.promotion-box .MuiChip-deleteIcon {
+    color: white !important;
+    font-weight: normal !important;
+}
+
+.promotion-box .MuiChip-filled {
+    background: var(--colorSecond);
+}
+
+
+.promotion-box fieldset {
+    border-color: var(--borderHomeColor) !important;
+}
+
+.text-especial {
+    text-decoration: line-through;
+}

@@ -1,0 +1,60 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /cinema
+
+aws:
+  accessKey: AKIAZI2LIHXTMMYKBE22
+  secretKey: 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
+  s3:
+    bucket: courseoutlinebucket
+    region: us-east-1
+
+
+spring:
+  application:
+    name: cinema
+
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+  datasource:
+    url: ${DBMS_CONNECTION:jdbc:mysql://localhost:3306/cinemadb}
+    driverClassName: "com.mysql.cj.jdbc.Driver"
+    password: ${DBMS_PASSWORD:root}
+    username: ${DBMS_USERNAME:root}
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate.dialect: org.hibernate.dialect.MySQL8Dialect
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: kitj317@gmail.com
+    password: jczp aylv xjzn ufje
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.starttls.enable: true
+
+
+jwt:
+  signerKey: "1TjXchw5FloESb63Kc+DFhTARvpWL4jUGCwfGWxuG5SIf/1y/LgJxHnMqaF6A/ij"
+  valid-duration: 36000 # in second
+  refreshable-duration: 360000 # in seconds
+
+payment:
+  vnPay:
+    url: ${PAY_URL:https://sandbox.vnpayment.vn/paymentv2/vpcpay.html}
+    tmnCode: ${TMN_CODE:NHLPKV5P}
+    secretKey: ${SECRET_KEY:VLCEKOE1LQGELTQ2UNLL5CYT5HLDS7RH}
+    returnUrl: ${RETURN_URL:http://localhost:8080/cinema/payment/vn-pay-callback}
+    version: ${VERSION:2.1.0}
+    command: ${COMMAND:pay}
+    orderType: ${ORDER_TYPE:other}

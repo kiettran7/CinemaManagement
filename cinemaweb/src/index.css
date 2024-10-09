@@ -1,0 +1,158 @@
+body {
+  --colorMain: #5856d6;
+  --bgColor: #2e3346;
+  --borderHomeColor: #555968;
+  --colorSecond: #6c79a8;
+  --colorDes: #CCCC;
+  margin: 0;
+  background-color: var(--bgColor) !important;
+  color: white !important;
+  font-family: "Be Vietnam Pro", sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: "Be Vietnam Pro", sans-serif;
+}
+
+.mt-80 {
+  margin-top: 80px !important;
+}
+
+.mt-30 {
+  margin-top: 30px !important;
+}
+
+.mt-15 {
+  margin-top: 15px !important;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.mb-60 {
+  margin-bottom: 60px !important;
+}
+
+.mb-20 {
+  margin-bottom: 20px !important;
+}
+
+.mr-5 {
+  margin-right: 5px !important;
+}
+
+.mr-10 {
+  margin-right: 10px !important;
+}
+
+.ml-14 {
+  margin-left: 14px !important;
+}
+
+.ml-15 {
+  margin-left: 15px !important;
+}
+
+.ml-30 {
+  margin-left: 30px !important;
+}
+
+.p-10 {
+  padding: 10px !important;
+}
+
+.p-30 {
+  padding: 30px !important;
+}
+
+.l-center {
+  align-items: center;
+  align-self: center;
+  align-content: center;
+}
+
+.center {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.align-center {
+  display: flex;
+  align-items: center;
+}
+
+.text-main,
+.slick-dots li.slick-active button:before {
+  color: var(--colorMain) !important;
+}
+
+.text-white {
+  color: white !important;
+}
+
+.text-normal {
+  font-weight: normal !important;
+}
+
+.text-title {
+  font-size: 1rem !important;
+}
+
+.text-des {
+  font-size: 0.85rem !important;
+  color: var(--colorDes) !important;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.border-2 {
+  border: 2px solid var(--colorMain) !important;
+}
+
+.radius {
+  border-radius: 15px !important;
+}
+
+.btn-bg {
+  background: var(--colorMain) !important;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .1);
+}
+
+.bb {
+  border-bottom: 1px solid var(--colorSecond);
+}
+
+.underline-none {
+  text-decoration: none !important;
+}
+
+.return:hover {
+  opacity: .5;
+}
+
+.start-end {
+  margin-left: auto !important;
+}
+
+.text-end {
+  text-align: end;
+}
