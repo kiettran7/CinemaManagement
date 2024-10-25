@@ -4,6 +4,7 @@ import com.ttk.cinema.DTOs.request.ApiResponse;
 import com.ttk.cinema.DTOs.request.ShowtimeRequest;
 import com.ttk.cinema.DTOs.response.ShowtimeResponse;
 import com.ttk.cinema.services.ShowtimeService;
+import jakarta.validation.Valid;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
@@ -19,7 +20,7 @@ public class ShowtimeController {
     ShowtimeService showtimeService;
 
     @PostMapping
-    ApiResponse<ShowtimeResponse> createShowtime(@RequestBody ShowtimeRequest request) {
+    ApiResponse<ShowtimeResponse> createShowtime(@Valid @RequestBody ShowtimeRequest request) {
         return ApiResponse.<ShowtimeResponse>builder()
                 .result(showtimeService.createShowtime(request))
                 .build();
@@ -41,7 +42,7 @@ public class ShowtimeController {
 
     @PutMapping("/{showtimeId}")
     ApiResponse<ShowtimeResponse> updateShowtime(@PathVariable String showtimeId,
-                                                 @RequestBody ShowtimeRequest request) {
+                                                 @Valid @RequestBody ShowtimeRequest request) {
         return ApiResponse.<ShowtimeResponse>builder()
                 .result(showtimeService.updateShowtime(showtimeId, request))
                 .build();

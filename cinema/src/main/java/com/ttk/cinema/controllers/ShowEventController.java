@@ -4,6 +4,7 @@ import com.ttk.cinema.DTOs.request.ApiResponse;
 import com.ttk.cinema.DTOs.request.ShowEventRequest;
 import com.ttk.cinema.DTOs.response.ShowEventResponse;
 import com.ttk.cinema.services.ShowEventService;
+import jakarta.validation.Valid;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
@@ -19,7 +20,7 @@ public class ShowEventController {
     ShowEventService showEventService;
 
     @PostMapping
-    ApiResponse<ShowEventResponse> createShowEvent(@RequestBody ShowEventRequest request) {
+    ApiResponse<ShowEventResponse> createShowEvent(@Valid @RequestBody ShowEventRequest request) {
         return ApiResponse.<ShowEventResponse>builder()
                 .result(showEventService.createShowEvent(request))
                 .build();
@@ -41,7 +42,7 @@ public class ShowEventController {
 
     @PutMapping("/{showEventId}")
     ApiResponse<ShowEventResponse> updateShowEvent(@PathVariable String showEventId,
-                                                 @RequestBody ShowEventRequest request) {
+                                                   @Valid @RequestBody ShowEventRequest request) {
         return ApiResponse.<ShowEventResponse>builder()
                 .result(showEventService.updateShowEvent(showEventId, request))
                 .build();

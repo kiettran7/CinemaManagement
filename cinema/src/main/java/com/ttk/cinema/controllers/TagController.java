@@ -4,6 +4,7 @@ import com.ttk.cinema.DTOs.request.ApiResponse;
 import com.ttk.cinema.DTOs.request.TagRequest;
 import com.ttk.cinema.DTOs.response.TagResponse;
 import com.ttk.cinema.services.TagService;
+import jakarta.validation.Valid;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
@@ -19,7 +20,7 @@ public class TagController {
     TagService tagService;
 
     @PostMapping
-    ApiResponse<TagResponse> createTag(@RequestBody TagRequest request) {
+    ApiResponse<TagResponse> createTag(@Valid @RequestBody TagRequest request) {
         return ApiResponse.<TagResponse>builder()
                 .result(tagService.createTag(request))
                 .build();
@@ -41,7 +42,7 @@ public class TagController {
 
     @PutMapping("/{tagId}")
     ApiResponse<TagResponse> updateTag(@PathVariable String tagId,
-                                       @RequestBody TagRequest request) {
+                                       @Valid @RequestBody TagRequest request) {
         return ApiResponse.<TagResponse>builder()
                 .result(tagService.updateTag(tagId, request))
                 .build();

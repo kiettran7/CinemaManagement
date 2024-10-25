@@ -4,6 +4,7 @@ import com.ttk.cinema.DTOs.request.ApiResponse;
 import com.ttk.cinema.DTOs.request.ShowRoomRequest;
 import com.ttk.cinema.DTOs.response.ShowRoomResponse;
 import com.ttk.cinema.services.ShowRoomService;
+import jakarta.validation.Valid;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
@@ -19,7 +20,7 @@ public class ShowRoomController {
     ShowRoomService showRoomService;
 
     @PostMapping
-    ApiResponse<ShowRoomResponse> createShowRoom(@RequestBody ShowRoomRequest request) {
+    ApiResponse<ShowRoomResponse> createShowRoom(@Valid @RequestBody ShowRoomRequest request) {
         return ApiResponse.<ShowRoomResponse>builder()
                 .result(showRoomService.createShowRoom(request))
                 .build();
@@ -41,7 +42,7 @@ public class ShowRoomController {
 
     @PutMapping("/{showRoomId}")
     ApiResponse<ShowRoomResponse> updateShowRoom(@PathVariable String showRoomId,
-                                                 @RequestBody ShowRoomRequest request) {
+                                                 @Valid @RequestBody ShowRoomRequest request) {
         return ApiResponse.<ShowRoomResponse>builder()
                 .result(showRoomService.updateShowRoom(showRoomId, request))
                 .build();

@@ -4,6 +4,7 @@ import com.ttk.cinema.DTOs.request.ApiResponse;
 import com.ttk.cinema.DTOs.request.SeatRequest;
 import com.ttk.cinema.DTOs.response.SeatResponse;
 import com.ttk.cinema.services.SeatService;
+import jakarta.validation.Valid;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
@@ -19,7 +20,7 @@ public class SeatController {
     SeatService seatService;
 
     @PostMapping
-    ApiResponse<SeatResponse> createSeat(@RequestBody SeatRequest request) {
+    ApiResponse<SeatResponse> createSeat(@Valid @RequestBody SeatRequest request) {
         return ApiResponse.<SeatResponse>builder()
                 .result(seatService.createSeat(request))
                 .build();
@@ -41,7 +42,7 @@ public class SeatController {
 
     @PutMapping("/{seatId}")
     ApiResponse<SeatResponse> updateSeat(@PathVariable String seatId,
-                                         @RequestBody SeatRequest request) {
+                                         @Valid @RequestBody SeatRequest request) {
         return ApiResponse.<SeatResponse>builder()
                 .result(seatService.updateSeat(seatId, request))
                 .build();

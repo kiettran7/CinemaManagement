@@ -64,7 +64,8 @@ public class SecurityConfig {
             "/seats", "/seats/**", // xem ghế và list
             "/showtimes", "/showtimes/**", // xem giờ bắt đầu - kết thúc và list
             "/movies", "/movies/**", // xem phim và list
-            "/payment", "/payment/**"
+            "/payment", "/payment/**",
+            "/comments"
     };
 
     @Autowired

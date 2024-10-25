@@ -4,11 +4,11 @@ server:
     context-path: /cinema
 
 aws:
-  accessKey: AKIAZI2LIHXTMMYKBE22
-  secretKey: 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
+  accessKey: 
+  secretKey: 
   s3:
-    bucket: courseoutlinebucket
-    region: us-east-1
+    bucket: 
+    region: 
 
 
 spring:

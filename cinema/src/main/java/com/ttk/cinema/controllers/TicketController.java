@@ -4,6 +4,7 @@ import com.ttk.cinema.DTOs.request.ApiResponse;
 import com.ttk.cinema.DTOs.request.TicketRequest;
 import com.ttk.cinema.DTOs.response.TicketResponse;
 import com.ttk.cinema.services.TicketService;
+import jakarta.validation.Valid;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
@@ -19,7 +20,7 @@ public class TicketController {
     TicketService ticketService;
 
     @PostMapping
-    ApiResponse<TicketResponse> createTicket(@RequestBody TicketRequest request) {
+    ApiResponse<TicketResponse> createTicket(@Valid @RequestBody TicketRequest request) {
         return ApiResponse.<TicketResponse>builder()
                 .result(ticketService.createTicket(request))
                 .build();
@@ -41,7 +42,7 @@ public class TicketController {
 
     @PutMapping("/{ticketId}")
     ApiResponse<TicketResponse> updateTicket(@PathVariable String ticketId,
-                                             @RequestBody TicketRequest request) {
+                                             @Valid @RequestBody TicketRequest request) {
         return ApiResponse.<TicketResponse>builder()
                 .result(ticketService.updateTicket(ticketId, request))
                 .build();

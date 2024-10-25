@@ -59,7 +59,7 @@ public class UserController {
 
     @PutMapping("/{userId}")
     ApiResponse<UserResponse> updateUser(@PathVariable String userId,
-                                         @ModelAttribute UserUpdateRequest request) throws IOException {
+                                         @Valid @ModelAttribute UserUpdateRequest request) throws IOException {
         return ApiResponse.<UserResponse>builder()
                 .result(userService.updateUser(userId, request))
                 .build();

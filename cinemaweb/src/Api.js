@@ -27,7 +27,8 @@ export const endpoints = {
     'showtimes': '/showtimes',
     'tags': '/tags',
     'tickets': '/tickets',
-    'users': '/users'
+    'users': '/users',
+    'comments': '/comments'
 }
 
 export const auThApi = (accessToken)=> axios.create({

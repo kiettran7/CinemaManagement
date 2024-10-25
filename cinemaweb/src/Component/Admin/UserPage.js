@@ -59,7 +59,10 @@ const UserPage = () => {
             // Prepare the updated user data
             const updatedUser = {
                 ...editUser,
+                roles: [editUser.roles[0]?.name], // Giữ lại chỉ tên của vai trò
             };
+
+            console.log("updatedUser", updatedUser)
 
             // Send the PUT request with the updated data
             await Api.put(`${endpoints['users']}/${editUser.userId}`, updatedUser, { 

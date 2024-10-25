@@ -4,6 +4,7 @@ import com.ttk.cinema.DTOs.request.ApiResponse;
 import com.ttk.cinema.DTOs.request.ShowScheduleRequest;
 import com.ttk.cinema.DTOs.response.ShowScheduleResponse;
 import com.ttk.cinema.services.ShowScheduleService;
+import jakarta.validation.Valid;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
@@ -19,7 +20,7 @@ public class ShowScheduleController {
     ShowScheduleService showScheduleService;
 
     @PostMapping
-    ApiResponse<ShowScheduleResponse> createShowSchedule(@RequestBody ShowScheduleRequest request) {
+    ApiResponse<ShowScheduleResponse> createShowSchedule(@Valid @RequestBody ShowScheduleRequest request) {
         return ApiResponse.<ShowScheduleResponse>builder()
                 .result(showScheduleService.createShowSchedule(request))
                 .build();
@@ -41,7 +42,7 @@ public class ShowScheduleController {
 
     @PutMapping("/{showScheduleId}")
     ApiResponse<ShowScheduleResponse> updateShowSchedule(@PathVariable String showScheduleId,
-                                                         @RequestBody ShowScheduleRequest request) {
+                                                         @Valid @RequestBody ShowScheduleRequest request) {
         return ApiResponse.<ShowScheduleResponse>builder()
                 .result(showScheduleService.updateShowSchedule(showScheduleId, request))
                 .build();
